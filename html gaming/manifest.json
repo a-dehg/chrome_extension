@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "twt",
+  "version": "1.0.1",
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://twitter.com/*" ],
+      "js": [ "p5.js", "sketch.js"]
+    }
+  ]
+
+
+}
